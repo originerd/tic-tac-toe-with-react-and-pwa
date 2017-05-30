@@ -1,7 +1,7 @@
 {
   "name": "tic-tac-toe-with-react-and-pwa",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "description": "Tic Tac Toe = TypeScript + React + MobX + PWA",
   "dependencies": {
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.22",
@@ -19,6 +19,25 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
-  }
+    "eject": "react-scripts-ts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/originerd/tic-tac-toe-with-react-and-pwa.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "React",
+    "MobX",
+    "PWA",
+    "Tic-Tac-Toe"
+  ],
+  "author": "Jitae Kim <originerd@gmail.com> (http://originerd.github.io)",
+  "license": "Bearware",
+  "bugs": {
+    "url": "https://github.com/originerd/tic-tac-toe-with-react-and-pwa/issues"
+  },
+  "homepage": "https://origienrd.github.io/tic-tac-toe-with-react-and-pwa/"
 }
