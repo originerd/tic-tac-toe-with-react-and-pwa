@@ -6,9 +6,19 @@ body {
   width: 500px;
 }
 
+.board {
+  height: 500px;
+  width: 500px;
+}
+
 @media only screen and (max-width : 500px) {
   body {
     width: 320px;
     padding: 60px 0;
+  }
+
+  .board {
+    height: 320px;
+    width: 320px;
   }
 }
