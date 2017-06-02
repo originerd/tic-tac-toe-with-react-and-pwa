@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Board from '../board/Board';
+import Board from '../game/Board';
 
 const App = () => <Board />;
 
