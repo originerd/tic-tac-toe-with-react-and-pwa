@@ -4,6 +4,8 @@ import {
   Icon,
 } from 'semantic-ui-react';
 
+import { StoneType } from './GameStore';
+
 const styles = {
   container: {
     alignItems: 'center' as 'center',
@@ -18,10 +20,10 @@ const styles = {
 };
 
 interface Props {
-  stone: string;
+  stone: StoneType;
 }
 
-const renderIcon = (stone: string) => {
+const renderIcon = (stone: StoneType) => {
   if (!stone) {
     return null;
   }

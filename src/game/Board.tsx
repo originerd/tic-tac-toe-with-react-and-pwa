@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Segment } from 'semantic-ui-react';
 
 import Row from './Row';
+import { StoneType } from './GameStore';
 
 const styles = {
   rowsContainer: {
@@ -13,18 +14,23 @@ const styles = {
   },
 };
 
-const board = [
-  new Array(3).fill(undefined),
-  new Array(3).fill(undefined),
-  new Array(3).fill(undefined),
+const defaultBoard = [
+  [null, null, null],
+  [null, null, null],
+  [null, null, null],
 ];
 
-const rows = board.map((row, i) => <Row columns={row} key={i} />);
+interface Props {
+  board?: StoneType[][];
+}
 
-const Board = () => (
+const renderRows = (board: StoneType[][]) =>
+  board.map((row, i) => <Row columns={row} key={i} />);
+
+const Board = ({ board = defaultBoard }: Props) => (
   <Segment className="board">
     <div style={styles.rowsContainer}>
-      {rows}
+      {renderRows(board)}
     </div>
   </Segment>
 );

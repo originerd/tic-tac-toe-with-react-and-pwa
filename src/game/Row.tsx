@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import Column from './Column';
+import { StoneType } from './GameStore';
 
 const styles = {
   columnContainer: {
@@ -14,10 +15,10 @@ const styles = {
 };
 
 interface Props {
-  columns: string[];
+  columns: StoneType[];
 }
 
-const renderColumns = (columns: string[]) =>
+const renderColumns = (columns: StoneType[]) =>
   columns.map((column, i) => (
     <div key={i} style={styles.columnContainer}>
       <Column stone={column} />
