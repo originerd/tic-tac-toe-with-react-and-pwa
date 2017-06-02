@@ -1,7 +1,13 @@
+import { Provider } from 'mobx-react';
 import * as React from 'react';
 
-import Board from '../game/Board';
+import BoardContainer from '../game/BoardContainer';
+import stores from '../stores';
 
-const App = () => <Board />;
+const App = () => (
+  <Provider {...stores}>
+    <BoardContainer />
+  </Provider>
+);
 
 export default App;
