@@ -17,7 +17,7 @@ const styles = {
   },
 };
 
-interface IProps {
+interface Props {
   stone: string;
 }
 
@@ -29,11 +29,11 @@ const renderIcon = (stone: string) => {
   const iconName = (stone === 'o') ? 'radio' : 'remove';
 
   return <Icon name={iconName} size="huge" style={styles.icon} />;
-}
+};
 
-const Column = ({ stone }: IProps) => (
+const Column = ({ stone }: Props) => (
   <Button
-    basic
+    basic={true}
     style={styles.container}
   >
     {renderIcon(stone)}

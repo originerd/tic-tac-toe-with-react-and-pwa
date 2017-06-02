@@ -13,7 +13,7 @@ const styles = {
   },
 };
 
-interface IProps {
+interface Props {
   columns: string[];
 }
 
@@ -24,7 +24,7 @@ const renderColumns = (columns: string[]) =>
     </div>
   ));
 
-const Row = ({ columns }: IProps) => (
+const Row = ({ columns }: Props) => (
   <div style={styles.container}>
     {renderColumns(columns)}
   </div>
